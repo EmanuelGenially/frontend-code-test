@@ -30,7 +30,7 @@ When finished, the app should let the user:
 - ~~Select a box, which should visually indicate that is selected~~
 - Drag the boxes around using interact.js and using React refs.
   - Keep in mind you should be able to drag a box even if it's not selected when the dragging starts.
-- Changing a box's color.
+- ~~Changing a box's color.~~
 
 # Extra credit
 
