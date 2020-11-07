@@ -2,16 +2,9 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import BoxDraggable from './BoxDraggable';
 
-const Box = ({ id, color, width, height, left, top }) => {
+const Box = ({ box }) => {
   return (
-    <BoxDraggable
-      id={id}
-      color={color}
-      width={width}
-      height={height}
-      left={left}
-      top={top}
-    >
+    <BoxDraggable box={box}>
       <div>Box</div>
     </BoxDraggable>
   );

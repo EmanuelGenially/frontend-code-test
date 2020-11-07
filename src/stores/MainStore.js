@@ -12,9 +12,16 @@ const MainStore = types
       addBox(box) {
         self.boxes.push(box);
       },
+      removeBox(index) {
+        self.boxes.splice(index, 1);
+      },
     };
   })
-  .views((self) => ({}));
+  .views((self) => ({
+    get selectedBoxes() {
+      return self.boxes.filter((box) => box.selected);
+    },
+  }));
 
 const store = MainStore.create();
 

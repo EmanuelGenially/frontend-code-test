@@ -1,7 +1,12 @@
-const { createBox } = require('../../domain/items/box/use-cases/createBox');
+import { removeBoxes } from '../../domain/items/box/use-cases/removeBoxes';
+import { createBox } from '../../domain/items/box/use-cases/createBox';
 
 const onHandlerClickAddBox = () => {
   createBox();
 };
 
-export { onHandlerClickAddBox };
+const onHandlerClickRemoveBoxes = () => {
+  removeBoxes();
+};
+
+export { onHandlerClickAddBox, onHandlerClickRemoveBoxes };

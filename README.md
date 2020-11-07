@@ -26,8 +26,8 @@ We've also added a rudimentary toolbar for some of the required functionality.
 
 When finished, the app should let the user:
 
-- Add and remove boxes.
-- Select a box, which should visually indicate that is selected
+- ~~Add and remove boxes.~~
+- ~~Select a box, which should visually indicate that is selected~~
 - Drag the boxes around using interact.js and using React refs.
   - Keep in mind you should be able to drag a box even if it's not selected when the dragging starts.
 - Changing a box's color.
@@ -36,7 +36,7 @@ When finished, the app should let the user:
 
 If you found the above too easy, or are feeling up for a bigger challenge, here are some extra tasks you could attempt:
 
-- Display a counter indicating how many boxes are selected.
+- ~~Display a counter indicating how many boxes are selected.~~
 - Support selection, dragging and color changing for multiple boxes.
 - Save the state of the app locally and restore it when it loads.
 - Undo / Redo capabilities
