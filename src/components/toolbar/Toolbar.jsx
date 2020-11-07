@@ -1,14 +1,15 @@
 import React from 'react';
+import { BoxesCount, Wrapper } from './Toolbar.styled';
 
-function Toolbar() {
+const Toolbar = () => {
   return (
-    <div className="toolbar">
+    <Wrapper>
       <button>Add Box</button>
       <button>Remove Box</button>
       <input type="color" />
-      <span>No boxes selected</span>
-    </div>
+      <BoxesCount>No boxes selected</BoxesCount>
+    </Wrapper>
   );
-}
+};
 
 export default Toolbar;

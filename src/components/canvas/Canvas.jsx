@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { observer } from 'mobx-react';
-import Box from '../components/Box';
+import Box from '../box/Box';
+import { Wrapper } from './Canvas.styled';
 
 function Canvas({ store }) {
   return (
-    <div className="canva">
+    <Wrapper>
       {store.boxes.map((box, index) => (
         <Box
           id={box.id}
@@ -18,7 +19,7 @@ function Canvas({ store }) {
           box={box}
         />
       ))}
-    </div>
+    </Wrapper>
   );
 }
 
