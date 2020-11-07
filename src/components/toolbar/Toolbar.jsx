@@ -1,7 +1,11 @@
 import { observer } from 'mobx-react';
 import React from 'react';
 import store from '../../stores/MainStore';
-import { onHandlerClickAddBox, onHandlerClickRemoveBoxes } from './actions';
+import {
+  onHandlerClickAddBox,
+  onHandlerClickRemoveBoxes,
+  onHandlerBlurColor,
+} from './actions';
 import { BoxesCount, Wrapper } from './Toolbar.styled';
 
 const Toolbar = () => {
@@ -11,7 +15,13 @@ const Toolbar = () => {
     <Wrapper>
       <button onClick={onHandlerClickAddBox}>Add Box</button>
       <button onClick={onHandlerClickRemoveBoxes}>Remove Box</button>
-      <input type="color" />
+      {selectedCount && (
+        <input
+          type="color"
+          onBlur={onHandlerBlurColor}
+          value={store.selectedBoxes[0].color}
+        />
+      )}
       <BoxesCount>
         {selectedCount
           ? `${selectedCount} boxes selected`

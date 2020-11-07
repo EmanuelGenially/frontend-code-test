@@ -5,7 +5,7 @@ import { onHandleClickBox } from './actions';
 
 const BoxDraggable = ({ box, children }) => {
   const { id, color, width, height, left, top, selected } = box;
-  console.log(selected);
+
   return (
     <Wrapper
       id={id}

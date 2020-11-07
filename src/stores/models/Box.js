@@ -9,6 +9,7 @@ const BoxModel = types
     left: 200,
     top: 100,
     selected: false,
+    node: types.maybe(types.frozen()),
   })
   .views((self) => ({}))
   .actions((self) => ({
@@ -17,6 +18,12 @@ const BoxModel = types
     },
     deselect() {
       self.selected = false;
+    },
+    setColor(color) {
+      self.color = color;
+    },
+    saveNode(node) {
+      self.node = node;
     },
   }));
 
